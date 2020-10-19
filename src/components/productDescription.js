@@ -98,6 +98,7 @@ export const Operator = styled.div`
   height: 20px;
   margin-top: 5px;
   text-align: center;
+  cursor: pointer;
 `;
 
 export const ContainerDivTotal = styled.div`
@@ -136,43 +137,42 @@ export const TotalPrice = styled.p`
 `;
 
 const ProductDescription = () => {
+  const products = [
+    {
+      title: "Vintage",
+      priceOrange: 54.99,
+      price: 94.99,
+      image: Image1,
+    },
+    {
+      title: "Levi Shoes",
+      priceOrange: 74.99,
+      price: 124.99,
+      image: Image2,
+    },
+  ];
+
   return (
     <Container>
-      <ContainerDiv>
-        <ContainerImage>
-          <Image src={Image1} />
-        </ContainerImage>
-        <ContainerPrice>
-          <Title>Vintage</Title>
-          <div>
-            <PriceOrange>$54.99</PriceOrange>
-            <Price>$94.99</Price>
-          </div>
-          <ContainerCount>
-            <Operator>-</Operator>
-            <Number>1</Number>
-            <Operator>+</Operator>
-          </ContainerCount>
-        </ContainerPrice>
-      </ContainerDiv>
-
-      <ContainerDiv>
-        <ContainerImage>
-          <Image src={Image2} />
-        </ContainerImage>
-        <ContainerPrice>
-          <Title>Levi Shoes</Title>
-          <div>
-            <PriceOrange>$74.99</PriceOrange>
-            <Price>$124.99</Price>
-          </div>
-          <ContainerCount>
-            <Operator>-</Operator>
-            <Number>1</Number>
-            <Operator>+</Operator>
-          </ContainerCount>
-        </ContainerPrice>
-      </ContainerDiv>
+      {products.map((product) => (
+        <ContainerDiv key={product.title}>
+          <ContainerImage>
+            <Image src={product.image} />
+          </ContainerImage>
+          <ContainerPrice>
+            <Title>{product.title}</Title>
+            <div>
+              <PriceOrange>${product.priceOrange}</PriceOrange>
+              <Price>${product.price}</Price>
+            </div>
+            <ContainerCount id={product.title}>
+              <Operator>-</Operator>
+              <Number>0</Number>
+              <Operator>+</Operator>
+            </ContainerCount>
+          </ContainerPrice>
+        </ContainerDiv>
+      ))}
 
       <ContainerDivTotal>
         <HR></HR>
