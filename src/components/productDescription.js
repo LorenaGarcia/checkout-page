@@ -6,16 +6,31 @@ import Image2 from "../images/photo2.png";
 export const Container = styled.div`
   background: #f2f2f2;
   border-radius: 12px;
-  width: 383px;
+  width: 90%;
   height: 535px;
   padding: 30px;
   display: flex;
   flex-flow: column;
+
+  @media (max-width: 480px) {
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 481px) and (max-width: 950px) {
+    width: 90%;
+  }
 `;
 
 export const ContainerDiv = styled.div`
   width: 100%;
   margin-bottom: 40px;
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    width: 90%;
+  }
 `;
 
 export const ContainerImage = styled.div`
@@ -30,10 +45,12 @@ export const Image = styled.img`
 `;
 
 export const ContainerPrice = styled.div`
-  /* float: right; */
   display: flex;
   flex-flow: column;
   width: 35%;
+  @media (min-width: 481px) and (max-width: 1050px) {
+    width: 20%;
+  }
 `;
 
 export const Title = styled.p`
@@ -104,6 +121,11 @@ export const Operator = styled.div`
 export const ContainerDivTotal = styled.div`
   width: 100%;
   margin-top: 40px;
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    width: 90%;
+  }
 `;
 
 export const HR = styled.hr`

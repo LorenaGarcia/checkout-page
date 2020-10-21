@@ -12,7 +12,7 @@ export const ContainerFooter = styled.div`
   margin-top: 100px;
 
   @media (max-width: 480px) {
-    margin-top: 150px;
+    margin-top: 220px;
   }
 `;
 

@@ -24,7 +24,7 @@ export const Container = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: 100%;
     grid-gap: 0px;
-    margin: 15px;
+    margin: 10px;
     grid-template-areas:
       "header"
       "sidebar"
@@ -32,7 +32,15 @@ export const Container = styled.div`
       "footer";
   }
 
-  @media (min-width: 481px) and (max-width: 780px) {
+  @media (min-width: 481px) and (max-width: 950px) {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    margin: 80px;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
   }
 `;
 
@@ -41,8 +49,12 @@ export const GridHeader = styled.header`
 `;
 
 export const GridMain = styled.div`
-  height: 700px;
   grid-area: main;
+  height: 800px;
+
+  @media (max-width: 480px) {
+    height: 700px;
+  }
 `;
 
 export const GridSideBar = styled.div`
@@ -51,7 +63,10 @@ export const GridSideBar = styled.div`
 
 export const GridFooter = styled.footer`
   grid-area: footer;
-  margin-top: 100px;
+
+  @media (max-width: 480px) {
+    margin-top: 100px;
+  }
 `;
 
 const Home = () => {
