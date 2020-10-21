@@ -48,6 +48,7 @@ export const ContainerPrice = styled.div`
   display: flex;
   flex-flow: column;
   width: 35%;
+
   @media (min-width: 481px) and (max-width: 1050px) {
     width: 20%;
   }
@@ -61,6 +62,11 @@ export const Title = styled.p`
   line-height: 20px;
   color: #4e5150;
   margin-top: 0px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 `;
 
 export const PriceOrange = styled.p`
@@ -71,6 +77,11 @@ export const PriceOrange = styled.p`
   font-size: 14px;
   line-height: 17px;
   color: #f2994a;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 `;
 
 export const Price = styled.p`
@@ -78,11 +89,16 @@ export const Price = styled.p`
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 15px;
   text-decoration-line: line-through;
   color: #4e5150;
   margin-top: 15px;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    line-height: 12px;
+  }
 `;
 
 export const ContainerCount = styled.div`
@@ -146,6 +162,11 @@ export const Description = styled.p`
   font-size: 18px;
   line-height: 22px;
   color: #333333;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 `;
 
 export const TotalPrice = styled.p`
@@ -205,8 +226,8 @@ const ProductDescription = () => {
 
         <HR></HR>
         <Total>
-          <Description>Shipping</Description>
-          <TotalPrice>$19</TotalPrice>
+          <Description>Total</Description>
+          <TotalPrice>$148.98</TotalPrice>
         </Total>
       </ContainerDivTotal>
     </Container>
