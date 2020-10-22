@@ -21,6 +21,10 @@ export const Container = styled.div`
   @media (min-width: 481px) and (max-width: 950px) {
     width: 90%;
   }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
+    height: 75%;
+  }
 `;
 
 export const ContainerDiv = styled.div`

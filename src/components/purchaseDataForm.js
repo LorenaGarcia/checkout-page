@@ -42,6 +42,10 @@ export const Form = styled.form`
   @media (min-width: 481px) and (max-width: 950px) {
     width: 100%;
   }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
+    width: 50%;
+  }
 `;
 
 export const Label = styled.p`
@@ -80,6 +84,10 @@ export const InputDuo = styled.input`
   @media (max-width: 480px) {
     width: 100%;
   }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
+    width: 100%;
+  }
 `;
 
 export const Select = styled.select`
@@ -95,6 +103,10 @@ export const Select = styled.select`
   color: #828282;
 
   @media (max-width: 480px) {
+    width: 100%;
+  }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
     width: 100%;
   }
 `;
@@ -119,6 +131,10 @@ export const ContainerInputs = styled.div`
   @media (max-width: 480px) {
     width: 100%;
   }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
+    width: 80%;
+  }
 `;
 
 export const ContainerLabelInput = styled.div`
@@ -127,7 +143,12 @@ export const ContainerLabelInput = styled.div`
 
 export const ContainerInputLeft = styled.div`
   float: left;
+
   @media (max-width: 480px) {
+    width: 48%;
+  }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
     width: 48%;
   }
 `;
@@ -136,6 +157,11 @@ export const ContainerInputRight = styled.div`
   float: right;
   @media (max-width: 480px) {
     width: 48%;
+    margin-left: 5px;
+  }
+
+  @media (min-width: 951px) and (max-width: 1040px) {
+    width: 50%;
     margin-left: 5px;
   }
 `;
